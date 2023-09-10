@@ -1,72 +1,134 @@
-# Getting Started with Create React App
+# Milestone 1 Submission: Build Your Own Text Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Team Information
 
-## Available Scripts
+- **Team Name**: CodeCrafters
+- **Team Members**:
+  1. Preet Rathod - preet0610
+  2. Manish Meena - manishm6376
+  3. Mohil - Mohil2003
+  4. Saurav Kumar - sauravkr20
 
-In the project directory, you can run:
+## Project Repository
 
-### `npm start`
+- **GitHub Repository**: [RichTextEditor_group_project](https://github.com/sauravkr20/RichTextEditor_group_project.git)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Milestone 1 Progress : week 1 done
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Team Formation**
+   - Our team, CodeCrafters, is comprised of four enthusiastic members with diverse backgrounds and skills, making us well-equipped to tackle this text editor project.
 
-### `npm test`
+2. **GitHub Repository Creation**
+   - We have created a GitHub repository named "TextEditor" to manage our project. The repository is accessible at [https://github.com/CodeCrafters/TextEditor](https://github.com/CodeCrafters/TextEditor).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Requirement Understanding**
+   - We have thoroughly reviewed and understood the project requirements, ensuring a clear comprehension of the project's scope and objectives.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technology Stack
 
-### `npm run eject`
+Our text editor project will use a technology stack to ensure functionality and a smooth user experience. Here are the key frameworks and their roles:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. **Next.js**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Role**: Frontend Development
+- **Functionality**: Next.js facilitates dynamic web page rendering and efficient routing, enhancing the user interface.
+- **Alternatives**: Alternatives to Next.js include traditional React applications or other frontend frameworks like Angular or Vue.js.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. **DartJS**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Role**: Text Editing and Formatting
+- **Functionality**: DartJS provides advanced text editing, formatting, and styling capabilities to improve the text editor's functionality.
+- **Alternatives**: Alternatives to DartJS might include libraries like Quill.js or Draft.js for text editing and formatting.
 
-## Learn More
+### 3. **MongoDB**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Role**: Database Management
+- **Functionality**: MongoDB stores user documents and metadata, offering scalability and flexibility for data management.
+- **Alternatives**: Alternatives to MongoDB include SQL databases like MySQL or PostgreSQL for structured data storage.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. **Express.js**
 
-### Code Splitting
+- **Role**: Backend Development
+- **Functionality**: Express.js handles API routing, authentication, and database interactions for secure and efficient data flow.
+- **Alternatives**: Alternatives to Express.js are Nest.js or Hapi.js for backend development with Node.js.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+By utilizing this technology stack, we aim to create a functional text editor with enhanced capabilities while considering alternative frameworks to ensure the best fit for our project.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Week 1: Project Setup and Tech Evaluation
 
-### Making a Progressive Web App
+- **Goals**:
+  - Understand project specs.
+  - Evaluate Next.js, DartJS, MongoDB, and Express.js.
+- **Tasks**:
+  - Review project prerequisites.
+  - Assess Next.js capabilities.
+  - Explore DartJS for editing.
+  - Inspect MongoDB for data.
+  - Study Express.js for backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Week 2: Frontend Development Initiation
 
-### Advanced Configuration
+- **Goals**:
+  - Begin Next.js UI development.
+- **Tasks**:
+  - Set up Next.js.
+  - Create text editor UI structure.
+  - Add basic components.
+  - Prepare for DartJS integration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Week 3: Backend Setup and Database Integration
 
-### Deployment
+- **Goals**:
+  - Establish backend using Express.js and MongoDB.
+- **Tasks**:
+  - Configure Express.js server.
+  - Implement initial API routes.
+  - Set up MongoDB backend.
+  - Enable NextAuth for authentication.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Week 4: Core Functionality and User Interaction
 
-### `npm run build` fails to minify
+- **Goals**:
+  - Implement essential text editor features.
+- **Tasks**:
+  - Develop user login.
+  - Enable document management.
+  - Create Document Row Component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# RichTextEditor_group_project
-# RichTextEditor_group_project
+### Week 5: Advanced Features and Text Editing
+
+- **Goals**:
+  - Enhance text editor with advanced DartJS features.
+- **Tasks**:
+  - Integrate DartJS for advanced text editing.
+  - Add optional features like syntax highlighting.
+
+### Week 6: Testing, Refinement, and Documentation
+
+- **Goals**:
+  - Ensure polished, functional text editor.
+- **Tasks**:
+  - Conduct thorough testing and debugging.
+  - Address remaining issues.
+  - Prepare project documentation.
+
+
+
+
+# Advanced Features for Rich Text Editor we are thinking of working on That will highlight our project
+
+1. **Code Syntax Highlighting**
+2. **Real-Time Collaboration**
+3. **Custom Extensions and Plugins**
+4. **Advanced Export Options**
+5. **Content Review and Approval Workflow**
+6. **Advanced Version Control**
+7. **Document Comparison**
+8. **AI-Powered Features (Grammarly API)**
+9. **AI-Powered Features (ChatGPT API)**
+
+
