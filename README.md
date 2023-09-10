@@ -19,7 +19,7 @@
    - Our team, CodeCrafters, is comprised of four enthusiastic members with diverse backgrounds and skills, making us well-equipped to tackle this text editor project.
 
 2. **GitHub Repository Creation**
-   - We have created a GitHub repository named "TextEditor" to manage our project. The repository is accessible at [https://github.com/CodeCrafters/TextEditor](https://github.com/CodeCrafters/TextEditor).
+   - We have created a GitHub repository named "TextEditor" to manage our project. The repository is accessible at [RichTextEditor_group_project](https://github.com/sauravkr20/RichTextEditor_group_project.git).
 
 3. **Requirement Understanding**
    - We have thoroughly reviewed and understood the project requirements, ensuring a clear comprehension of the project's scope and objectives.
