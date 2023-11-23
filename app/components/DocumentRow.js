@@ -2,7 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { useRouter } from "next/navigation";
 import { MdArticle } from "react-icons/";
 
-function DocumentRow({ id, fileName, date }) {
+function DocumentRow ({ id, fileName, date })  {
 	const router = useRouter();
 	return (
 		<div
@@ -11,9 +11,8 @@ function DocumentRow({ id, fileName, date }) {
 		>
 			<MdArticle size="3xl" color="blue" />
 			<p className="flex-grow pl-5 w-10 pr-10 truncate">{fileName}</p>
-			<p className="pr-5 text-sm">{date?.to_Date().toLocaleDateString()}</p>
+			<p className="pr-5 text-sm">{date}</p>
 		</div>
 	);
 }
-
 export default DocumentRow;

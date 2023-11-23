@@ -1,13 +1,13 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyBRZ9zfjQ6eqnOItDi_SKETjQ2fcFKokG0",
-	authDomain: "rich-text-857c6.firebaseapp.com",
-	projectId: "rich-text-857c6",
-	storageBucket: "rich-text-857c6.appspot.com",
-	messagingSenderId: "711278973444",
-	appId: "1:711278973444:web:e0dcaf4ce7f1b576e71b51",
-};
+	apiKey: "AIzaSyCsYJ61m6GcjivnTFDMf6qKJNbnfHN7B5k",
+	authDomain: "rich-text-editor-cdb3c.firebaseapp.com",
+	projectId: "rich-text-editor-cdb3c",
+	storageBucket: "rich-text-editor-cdb3c.appspot.com",
+	messagingSenderId: "521120323603",
+	appId: "1:521120323603:web:106de77120b3828e5947e6"
+  };
 
 //   This is firebase config file rich-text app
 

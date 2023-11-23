@@ -4,10 +4,11 @@ import Login from "./components/Login";
 import Image from "next/image";
 import { IconButton } from "@material-tailwind/react";
 import { FaBeer } from "react-icons/fa";
-import { doc, addDoc, setDoc } from "firebase/firestore";
-import { useState } from "react";
-
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { useCollection } from "react-firebase-hooks/firestore"
 import { useRouter } from "next/navigation";
+import { MdArticle } from "react-icons/";
 
 import {
 	Button,
@@ -22,41 +23,48 @@ import { db } from "./firebase";
 
 import { serverTimestamp } from "firebase/firestore";
 
+async function addDocument (name,user) {
+	// console.log("Document adding");
+	try{
+		const docRef = await addDoc(collection(db,"userDocs",`${user.email}`,"docs"), {
+			name:name,
+			timeCreated:serverTimestamp()
+		});
+		console.log("Document added", docRef.id);
+		return docRef.id;
+	}
+	catch (error)
+	{
+		console.error(error);
+		return false;
+	}
+};
 export default function Home() {
-	const { user } = UserAuth();
+	const { user, googleSignIn, logOut } = UserAuth();
+	if(!user)
+		return <Login />;
 	const router = useRouter();
-
+	console.log(user);
 	const [showModal, setShowModal] = useState(false);
 	const [input, setInput] = useState("");
+	const [snap, loading, error] = useCollection(collection(db,"userDocs",`${user.email}`,"docs"));
+	const getData = async (user,setSnap) => {
+		console.log(user, "from getData");
+		const querySnapshot = await getDocs(collection(db,"userDocs",`${user.email}`,"docs"));
+		querySnapshot.forEach((doc) => {
+			console.log(doc.id, " => ", doc.data());
+		});
+		setSnap(querySnapshot);
+	}
+	const createDocument = async (name) => {
+		if (!name) return;
 
-	// const createDocument = () => {
-	// 	if (!input) return;
-	// 	db.collection("userDocs").doc(user.email).collection("docs").add({
-	// 		fileName: input,
-	// 		timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-	// 	});
-	// 	setInput("");
-	// 	setShowModal(false);
-	// };
-
-	const createDocument = async () => {
-		if (!input) return;
-
-		// router.push(`/doc/1`);
-
-		const docRef = doc(db, "userDocs", user.email);
-
-		try {
-			console.log("hi");
-			await setDoc(docRef, {
-				fileName: input,
-				timestamp: serverTimestamp(),
-			});
+		const id = await addDocument(name,user);
+		if(id)
+		{
 			setInput("");
 			setShowModal(false);
-		} catch (error) {
-			// Handle any errors that occur during document creation.
-			console.error("Error adding document: ", error);
+			router.push(`/doc/${id}`)
 		}
 	};
 
@@ -69,7 +77,7 @@ export default function Home() {
 					onChange={(e) => setInput(e.target.value)}
 					type="text"
 					className="outline-none w-full"
-					onKeyDown={(e) => e.key === "Enter" && createDocument()}
+					onKeyDown={(e) => e.key === "Enter" && createDocument(input)}
 				></input>
 			</DialogBody>
 			<DialogFooter>
@@ -84,7 +92,11 @@ export default function Home() {
 				>
 					<span>Cancel</span>
 				</Button>
-				<Button variant="gradient" color="green" onClick={createDocument}>
+				<Button
+					variant="gradient"
+					color="green"
+					onClick={() => createDocument(input)}
+				>
 					<span>Create</span>
 				</Button>
 			</DialogFooter>
@@ -132,6 +144,16 @@ export default function Home() {
 								<p className="mr-12">Date Created</p>
 								<FaBeer />
 							</div>
+						{snap?.docs.map(doc => (
+							<div
+							onClick={() => router.push(`/doc/${doc.id}`)}
+							className="flex items-center p-4 rounded-lg hover:bg-gray-100 text-gray-700 text-sm cursor-pointer"
+						>
+							<p className="flex-grow pl-5 w-10 pr-10 truncate">{doc.data().name}</p>
+							<p className="pr-5 text-sm">{Date(doc.data().timeCreated?.seconds)}</p>
+							{console.log(doc.data().timeCreated)}
+						</div>
+						))}
 						</div>
 					</section>
 				</div>
