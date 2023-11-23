@@ -9,13 +9,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyDc554grupfsN67iltK9q4PMbsLpnJ9ahs",
-	authDomain: "richtextedd.firebaseapp.com",
-	projectId: "richtextedd",
-	storageBucket: "richtextedd.appspot.com",
-	messagingSenderId: "730768564000",
-	appId: "1:730768564000:web:99e7d9229a90a5a09c4145",
-};
+	apiKey: "AIzaSyCsYJ61m6GcjivnTFDMf6qKJNbnfHN7B5k",
+	authDomain: "rich-text-editor-cdb3c.firebaseapp.com",
+	projectId: "rich-text-editor-cdb3c",
+	storageBucket: "rich-text-editor-cdb3c.appspot.com",
+	messagingSenderId: "521120323603",
+	appId: "1:521120323603:web:106de77120b3828e5947e6"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

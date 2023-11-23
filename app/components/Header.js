@@ -22,7 +22,7 @@ function Header() {
 		}
 	};
 
-	console.log(user);
+	// console.log(user);
 
 	const srcImg = user.photoURL;
 	return (
